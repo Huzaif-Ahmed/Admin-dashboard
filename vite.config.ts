@@ -26,3 +26,10 @@ export default defineConfig({
     ,react()
     ,envCompatible()],
 })
+declare namespace NodeJS {
+  interface ProcessEnv {
+    VITE_API_VERIFYTOKEN: string;
+    VITE_API_REFERRAL: string;
+    VITE_API_PERMACODE_CREATE: string;
+  }
+}
