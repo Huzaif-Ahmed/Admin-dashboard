@@ -17,21 +17,24 @@ let isLoggedin = false;
 
 // console.log("metadata", import.meta.env);
 if(hasCredentials){
-  try {
-    const decodedCredentials = atob(hasCredentials);
-    let [username, password] = decodedCredentials.split(':');
+  // try {
+  //   const decodedCredentials = atob(hasCredentials);
+  //   let [username, password] = decodedCredentials.split(':');
    
-    if(username=="garden.finance" && password=="garden.finance"){
+  //   if(username=="garden.finance" && password=="garden.finance"){
       
-      isLoggedin = true;
-    }
-    else{
-      isLoggedin = false;
-    }
-  } catch (error) {
-    console.error('Error decoding credentials:', error);
-  }
+  //     isLoggedin = true;
+  //   }
+  //   else{
+  //     isLoggedin = false;
+  //   }
+  // } catch (error) {
+  //   console.error('Error decoding credentials:', error);
+  // }
+  isLoggedin = true;
 }
+
+
 console.log(hasCredentials);
 
 const router = createBrowserRouter([
