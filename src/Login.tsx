@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
+
 export default function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -26,8 +27,10 @@ export default function Login() {
       if(response.status === 200) {
         localStorage.setItem('token', token);
         toast.success('Login successful!');
-        console.log('going to /app');
-        window.location.reload() 
+        setTimeout(() => {
+          window.location.href = '/';
+        }, 1000);
+        
         
       }
       else {
