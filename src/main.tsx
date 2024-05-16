@@ -11,18 +11,11 @@ import './index.css'
 
 let hasCredentials = localStorage.getItem('token');
 let isLoggedin = false;
-declare global {
-  interface ImportMeta {
-    env: {
-      VITE_API_VERIFYTOKEN: string,
-      VITE_API_REFERRAL: string,
-      VITE_API_PERMACODE_CREATE: string,
 
-    };
-  }
-}
 
-console.log("metadata", JSON.stringify(import.meta.env.VITE_API_VERIFYTOKEN));
+
+
+// console.log("metadata", import.meta.env);
 if(hasCredentials){
   try {
     const decodedCredentials = atob(hasCredentials);

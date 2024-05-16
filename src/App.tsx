@@ -28,6 +28,7 @@ interface Data {
 }
 
 function App() {
+  console.log(JSON.stringify(process.env));
   const [data, setData] = useState<{ [key: string]: { referral_code: string; referred_to: string[] } } | null>(null);
   const [showModal, setShowModal] = useState(false);
 
