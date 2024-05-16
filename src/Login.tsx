@@ -17,6 +17,7 @@ export default function Login() {
     const token = btoa(`${username}:${password}`);
 
     try {
+      console.log("API URL:", import.meta.env.VITE_API_VERIFYTOKEN);
       const response = await axios.get(import.meta.env.VITE_API_VERIFYTOKEN, {
         headers: {
           'Authorization': `Basic ${token}`
