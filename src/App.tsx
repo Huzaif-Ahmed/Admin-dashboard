@@ -42,7 +42,7 @@ function App() {
       );
       const d = response.data;
 
-      let dataObj: Referrals = {};
+      const dataObj: Referrals = {};
 
       for (let i = 0; i < d.perma_codes.length; i++) {
         const item = d.perma_codes[i];
@@ -102,13 +102,13 @@ function App() {
                 <table className="w-full text-left border-collapse table-fixed">
                   <tbody>
                     <tr className="bg-gray-100">
-                      <td className="border px-6 py-4 w-1/3 break-words">
+                      <td className="border px-6 py-4 w-1/5 break-words">
                         {key}
                       </td>
-                      <td className="border px-6 py-4 w-1/3 break-words">
+                      <td className="border px-6 py-4 w-2/5 break-words">
                         {value.user_address}
                       </td>
-                      <td className="border px-6 py-4 w-1/3 break-words">
+                      <td className="border px-6 py-4 w-2/5 break-words">
                         {value.referred_to.length > 0 ? (
                           <ul>
                             {value.referred_to.map((referral, index) => (
@@ -140,13 +140,13 @@ function App() {
                 <table className="w-full text-left border-collapse table-fixed">
                   <tbody>
                     <tr className="bg-gray-100">
-                      <td className="border px-6 py-4 w-1/3 break-words">
+                      <td className="border px-6 py-4 w-1/5 break-words">
                         {key}
                       </td>
-                      <td className="border px-6 py-4 w-1/3 break-words">
+                      <td className="border px-6 py-4 w-2/5 break-words">
                         {value.user_address}
                       </td>
-                      <td className="border px-6 py-4 w-1/3 break-words">
+                      <td className="border px-6 py-4 w-2/5 break-words">
                         {value.referred_to.length > 0 ? (
                           <ul>
                             {value.referred_to.map((referral, index) => (
